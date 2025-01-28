@@ -1,0 +1,25 @@
+package controle;
+
+import java.util.Scanner;
+
+public class DesafioWhile {
+	
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Digite a sua nota?");
+		Double nota = entrada.nextDouble();
+		
+		if (nota >= 0 || nota <= 10) {
+			System.out.println("Sua nota é valida");
+			
+		}
+		
+		
+			entrada.close();
+
+
+	}
+
+}

@@ -1,0 +1,46 @@
+package controle;
+
+import java.util.Scanner;
+
+public class DesafioWhile {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        int quantidadeDeNotas = 0;
+        double nota = 0.0;
+        String saida = "";
+        double total = 0;
+
+        while (true) {  // O loop continua até que o usuário digite "sair"
+            System.out.println("Digite a sua nota (ou digite 'sair' para encerrar):");
+            // Verifica se a próxima entrada é um número válido (double)
+            if (entrada.hasNextDouble()) {
+                nota = entrada.nextDouble();
+                entrada.nextLine(); // Limpa o buffer de linha após ler o número
+
+                if (nota >= 0 && nota <= 10) {
+                    total += nota;
+                    quantidadeDeNotas++;
+                } else {
+                    System.out.println("Nota inválida, somente de 0.0 a 10.0. Tente novamente!");
+                    System.out.println(); // Quebra de linha
+                }
+            } else {
+                saida = entrada.nextLine(); // Lê a string digitada pelo usuário
+                if (saida.equalsIgnoreCase("sair")) {
+                    break; // Sai do loop se o usuário digitar 'sair'
+                } else {
+                    System.out.println("Entrada inválida. Digite um número para a nota ou 'sair' para encerrar.");
+                }
+            }
+        }
+
+        // Exibe o total de notas e a quantidade de notas válidas
+        System.out.println("Total de notas válidas: " + quantidadeDeNotas);
+        System.out.println("Soma das notas válidas: " + total);
+
+        entrada.close();
+    }
+}
