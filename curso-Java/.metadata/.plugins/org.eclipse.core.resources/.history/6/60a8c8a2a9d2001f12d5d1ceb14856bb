@@ -1,0 +1,35 @@
+package controle;
+
+import java.util.Scanner;
+
+public class DesafioWhile {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+
+		int quantidadeDeNotas = 0;
+		double nota = 0.0;
+		double total = 0;
+
+		while (nota != 1) {
+			System.out.println("Digite a sua nota?");
+			nota = entrada.nextDouble();
+
+			if (nota >= 0 && nota <= 10) {
+				total += nota;
+				quantidadeDeNotas ++;
+				System.out.println("Caso deseje sair informe: Sair");
+
+			} else {
+				System.out.println("Nota invalida, tente novamente!");
+
+			}
+
+		}
+
+		entrada.close();
+
+	}
+
+}

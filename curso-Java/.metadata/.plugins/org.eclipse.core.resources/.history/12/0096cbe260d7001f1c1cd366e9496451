@@ -1,0 +1,47 @@
+package controle;
+
+import java.util.Scanner;
+
+public class DesafioWhile {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+		
+		String saida = "";
+		int notasValidas = 0;
+		double total = 0.0;
+		double mediaNotas = 0.0;
+		double nota = 0.0;
+
+		while (!saida.equalsIgnoreCase("sair")) {
+			System.out.println("Informe sua nota, caso deseje sair informe 'SAIR'.");
+			nota = entrada.nextDouble();	
+			
+			
+			if (nota >= 0 && nota<= 10){
+				total +=nota;
+				notasValidas ++;
+				
+			} else {
+				System.out.println("Somente aceitamos notas de 0.0 a 10.00.");
+			}
+			
+		} else {		
+			saida = entrada.next();
+			if (saida.contentEquals("sair")) {
+				break;
+			}
+			 System.out.println("Por favor, informe um número válido para a nota.");
+		}
+		
+		
+		entrada.close();
+
+		
+
+		}
+
+		// System.out.println("Total de notas validas: " + notasValidas);
+
+	}
