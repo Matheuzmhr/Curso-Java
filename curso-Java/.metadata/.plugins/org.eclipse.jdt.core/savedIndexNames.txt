@@ -1,5 +1,0 @@
-INDEX VERSION 1.134+C:\Users\bigma\Desktop\curso-Java\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-2365619817.index
-1288848795.index
-3654592591.index
